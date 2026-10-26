@@ -1,449 +1,143 @@
 <!DOCTYPE html>
-<html lang="id">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>StudySpace</title>
+    <title>Belajaryuk</title>
 
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
         body {
             font-family: Arial, sans-serif;
-            background-color: #f8faff;
-            color: #172554;
+            background-color: white;
+            margin: 0;
         }
 
-        /* NAVBAR */
         header {
-            background-color: white;
-            padding: 20px 9%;
+            background-color: #eaf2ff;
+            padding: 20px 30px;
             display: flex;
             align-items: center;
-            border-bottom: 1px solid #dbeafe;
+            justify-content: space-between;
+        }
+
+        .brand {
+            display: flex;
+            align-items: center;
+            gap: 12px;
         }
 
         .logo {
-            font-size: 24px;
-            font-weight: bold;
-            color: #2563eb;
-            margin-right: 65px;
+            width: 42px;
+            height: 42px;
+            border-radius: 12px;
+            background: linear-gradient(135deg, #2563eb, #60a5fa);
+            display: inline-block;
         }
 
-        nav {
-            display: flex;
-            gap: 30px;
+        h1 {
+            color: #2563eb;
         }
 
         nav a {
+            margin-right: 15px;
             text-decoration: none;
-            color: #64748b;
-            font-size: 14px;
+            color: #333;
         }
 
-        nav a:first-child {
-            color: #2563eb;
-            font-weight: bold;
-        }
-
-        .tagline {
-            margin-left: auto;
-            color: #64748b;
-            font-size: 12px;
-        }
-
-        /* HERO SECTION */
         .hero {
-            padding: 55px 9% 35px;
+            text-align: left;
+            padding: 30px 30px 20px;
+            margin-left: 10px;
         }
 
-        .hero h1 {
-            font-size: 44px;
-            margin-bottom: 15px;
-        }
-
-        .hero h1 span {
-            color: #2563eb;
-        }
-
-        .hero p {
-            font-size: 16px;
-            color: #64748b;
-            line-height: 1.7;
-            max-width: 550px;
-        }
-
-        /* SEARCH BAR */
-        .search-box {
-            margin-top: 25px;
-            max-width: 650px;
-        }
-
-        .search-box input {
-            width: 100%;
-            padding: 15px 20px;
-            border: 1px solid #bfdbfe;
-            border-radius: 10px;
-            background-color: white;
-            font-size: 14px;
-            outline: none;
-        }
-
-        /* CATEGORY */
-        .categories {
+        .cards {
             display: flex;
-            gap: 15px;
             flex-wrap: wrap;
-            margin-top: 25px;
+            gap: 20px;
+            justify-content: center;
+            padding: 0 20px 30px;
         }
 
-        .category {
-            padding: 10px 24px;
-            border: 1px solid #dbeafe;
-            border-radius: 30px;
-            background-color: white;
-            color: #64748b;
-            font-size: 13px;
+        .card {
+            border: 1px solid #e5e7eb;
+            padding: 15px;
+            width: calc(50% - 20px);
+            min-width: 250px;
+            box-sizing: border-box;
+            background: #fff;
+            border-radius: 18px 18px 16px 16px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.04);
         }
 
-        .category.active {
+        .button {
             background-color: #2563eb;
             color: white;
-            border-color: #2563eb;
+            padding: 8px;
+            text-decoration: none;
         }
 
-        /* WEBSITE GRID */
-        .container {
-            padding: 10px 9% 60px;
-        }
-
-        .section-heading {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            margin-bottom: 20px;
-        }
-
-        .section-heading h2 {
-            font-size: 25px;
-        }
-
-        .section-heading p {
-            font-size: 13px;
-            color: #64748b;
-        }
-
-        .website-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 22px;
-        }
-
-        /* WEBSITE CARD */
-        .card {
-            background-color: white;
-            border: 1px solid #dbeafe;
-            border-radius: 12px;
-            padding: 25px;
-            min-height: 225px;
-        }
-
-        .card-header {
-            display: flex;
-            align-items: center;
-            gap: 15px;
-            margin-bottom: 18px;
-        }
-
-        .icon {
-            width: 50px;
-            height: 50px;
-            background-color: #eff6ff;
-            border-radius: 12px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            color: #2563eb;
-            font-size: 23px;
-        }
-
-        .card h3 {
-            font-size: 18px;
-            margin-bottom: 8px;
-        }
-
-        .label {
-            display: inline-block;
-            padding: 5px 10px;
-            border-radius: 20px;
-            background-color: #eff6ff;
-            color: #2563eb;
-            font-size: 11px;
-        }
-
-        .card-description {
-            color: #64748b;
-            font-size: 14px;
-            line-height: 1.7;
-            margin-bottom: 20px;
-        }
-
-        .button-placeholder {
-            display: inline-block;
-            padding: 9px 17px;
-            border: 1px solid #2563eb;
-            border-radius: 25px;
-            color: #2563eb;
-            font-size: 12px;
-        }
-
-        /* FOOTER */
         footer {
+            background-color: #eaf2ff;
             text-align: center;
-            padding: 25px;
-            background-color: white;
-            border-top: 1px solid #dbeafe;
-            color: #64748b;
-            font-size: 12px;
-        }
-
-        /* RESPONSIVE */
-        @media (max-width: 900px) {
-            .website-grid {
-                grid-template-columns: repeat(2, 1fr);
-            }
-
-            header,
-            .hero,
-            .container {
-                padding-left: 5%;
-                padding-right: 5%;
-            }
-
-            .tagline {
-                display: none;
-            }
-        }
-
-        @media (max-width: 600px) {
-            .website-grid {
-                grid-template-columns: 1fr;
-            }
-
-            header {
-                flex-wrap: wrap;
-                gap: 15px;
-            }
-
-            .logo {
-                margin-right: 20px;
-            }
-
-            nav {
-                gap: 15px;
-            }
-
-            .hero h1 {
-                font-size: 34px;
-            }
-
-            .section-heading h2 {
-                font-size: 20px;
-            }
+            padding: 15px;
         }
     </style>
 </head>
 
 <body>
 
-    <!-- NAVBAR -->
     <header>
-        <div class="logo">▣ StudySpace</div>
-
+        <div class="brand">
+            <span class="logo" aria-label="Logo Belajaryuk"></span>
+            <h2>Belajaryuk</h2>
+        </div>
         <nav>
             <a href="#">Beranda</a>
             <a href="#">Tentang</a>
         </nav>
-
-        <div class="tagline">
-            Your little space to learn.
-        </div>
     </header>
 
-    <!-- HERO SECTION -->
-    <section class="hero">
-        <h1>Learn Something <span>New.</span></h1>
+    <div class="hero">
+        <h1>Learn Something New.</h1>
+        <p>Your little space to learn.</p>
+        <p>Temukan berbagai website untuk membantu proses belajarmu.</p>
+    </div>
 
-        <p>
-            Temukan berbagai website pilihan untuk membantu
-            proses belajarmu, semuanya dalam satu tempat.
-        </p>
-
-        <!-- SEARCH BAR -->
-        <div class="search-box">
-            <input
-                type="text"
-                placeholder="Cari website atau topik belajar..."
-            >
+    <div class="cards">
+        <div class="card">
+            <h3>📚 Nama Website 1</h3>
+            <p>Deskripsi singkat website belajar.</p>
+            <a href="#" class="button">Kunjungi Website</a>
         </div>
 
-        <!-- CATEGORY -->
-        <div class="categories">
-            <div class="category active">Semua</div>
-            <div class="category">Bahasa</div>
-            <div class="category">Sains & Matematika</div>
-            <div class="category">Produktivitas</div>
-            <div class="category">Kreativitas</div>
-        </div>
-    </section>
-
-    <!-- WEBSITE GRID -->
-    <main class="container">
-
-        <div class="section-heading">
-            <h2>Website Pilihan</h2>
-            <p>6 website tersedia</p>
+        <div class="card">
+            <h3>💻 Nama Website 2</h3>
+            <p>Deskripsi singkat website belajar.</p>
+            <a href="#" class="button">Kunjungi Website</a>
         </div>
 
-        <div class="website-grid">
-
-            <!-- CARD 1 -->
-            <div class="card">
-                <div class="card-header">
-                    <div class="icon">✦</div>
-
-                    <div>
-                        <h3>Nama Website</h3>
-                        <span class="label">Kategori</span>
-                    </div>
-                </div>
-
-                <p class="card-description">
-                    Deskripsi singkat mengenai website
-                    dan manfaatnya untuk kegiatan belajar.
-                </p>
-
-                <div class="button-placeholder">
-                    Kunjungi website ↗
-                </div>
-            </div>
-
-            <!-- CARD 2 -->
-            <div class="card">
-                <div class="card-header">
-                    <div class="icon">✧</div>
-
-                    <div>
-                        <h3>Nama Website</h3>
-                        <span class="label">Kategori</span>
-                    </div>
-                </div>
-
-                <p class="card-description">
-                    Deskripsi singkat mengenai website
-                    dan manfaatnya untuk kegiatan belajar.
-                </p>
-
-                <div class="button-placeholder">
-                    Kunjungi website ↗
-                </div>
-            </div>
-
-            <!-- CARD 3 -->
-            <div class="card">
-                <div class="card-header">
-                    <div class="icon">✎</div>
-
-                    <div>
-                        <h3>Nama Website</h3>
-                        <span class="label">Kategori</span>
-                    </div>
-                </div>
-
-                <p class="card-description">
-                    Deskripsi singkat mengenai website
-                    dan manfaatnya untuk kegiatan belajar.
-                </p>
-
-                <div class="button-placeholder">
-                    Kunjungi website ↗
-                </div>
-            </div>
-
-            <!-- CARD 4 -->
-            <div class="card">
-                <div class="card-header">
-                    <div class="icon">◇</div>
-
-                    <div>
-                        <h3>Nama Website</h3>
-                        <span class="label">Kategori</span>
-                    </div>
-                </div>
-
-                <p class="card-description">
-                    Deskripsi singkat mengenai website
-                    dan manfaatnya untuk kegiatan belajar.
-                </p>
-
-                <div class="button-placeholder">
-                    Kunjungi website ↗
-                </div>
-            </div>
-
-            <!-- CARD 5 -->
-            <div class="card">
-                <div class="card-header">
-                    <div class="icon">✿</div>
-
-                    <div>
-                        <h3>Nama Website</h3>
-                        <span class="label">Kategori</span>
-                    </div>
-                </div>
-
-                <p class="card-description">
-                    Deskripsi singkat mengenai website
-                    dan manfaatnya untuk kegiatan belajar.
-                </p>
-
-                <div class="button-placeholder">
-                    Kunjungi website ↗
-                </div>
-            </div>
-
-            <!-- CARD 6 -->
-            <div class="card">
-                <div class="card-header">
-                    <div class="icon">◎</div>
-
-                    <div>
-                        <h3>Nama Website</h3>
-                        <span class="label">Kategori</span>
-                    </div>
-                </div>
-
-                <p class="card-description">
-                    Deskripsi singkat mengenai website
-                    dan manfaatnya untuk kegiatan belajar.
-                </p>
-
-                <div class="button-placeholder">
-                    Kunjungi website ↗
-                </div>
-            </div>
-
+        <div class="card">
+            <h3>🎨 Nama Website 3</h3>
+            <p>Deskripsi singkat website belajar.</p>
+            <a href="#" class="button">Kunjungi Website</a>
         </div>
-    </main>
 
-    <!-- FOOTER -->
-    <footer>
-        StudySpace © 2026 · Keep learning, keep growing.
-    </footer>
+        <div class="card">
+            <h3>📝 Nama Website 4</h3>
+            <p>Deskripsi singkat website belajar.</p>
+            <a href="#" class="button">Kunjungi Website</a>
+        </div>
+
+        <div class="card">
+            <h3>🌐 Nama Website 5</h3>
+            <p>Deskripsi singkat website belajar.</p>
+            <a href="#" class="button">Kunjungi Website</a>
+        </div>
+
+        <div class="card">
+            <h3>🚀 Nama Website 6</h3>
+            <p>Deskripsi singkat website belajar.</p>
+            <a href="#" class="button">Kunjungi Website</a>
+        </div>
+    </div>
 
 </body>
 </html>
