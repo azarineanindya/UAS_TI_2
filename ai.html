@@ -1,0 +1,131 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>AI - Belajaryuk</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: white;
+            margin: 0;
+        }
+
+        header {
+            background-color: #eaf2ff;
+            padding: 20px 30px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .brand {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .logo {
+            width: 42px;
+            height: 42px;
+            border-radius: 12px;
+            background: linear-gradient(135deg, #2563eb, #60a5fa);
+            display: inline-block;
+        }
+
+        nav a {
+            margin-right: 15px;
+            text-decoration: none;
+            color: #333;
+        }
+
+        .hero {
+            text-align: left;
+            padding: 30px 30px 20px;
+            margin-left: 10px;
+        }
+
+        .cards {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+            padding: 0 20px 30px;
+        }
+
+        .card {
+            border: 1px solid #e5e7eb;
+            padding: 15px;
+            width: calc(50% - 20px);
+            min-width: 250px;
+            box-sizing: border-box;
+            background: #fff;
+            border-radius: 18px 18px 16px 16px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.04);
+        }
+
+        .button {
+            background-color: #2563eb;
+            color: white;
+            padding: 8px 12px;
+            text-decoration: none;
+            border-radius: 10px;
+            display: inline-block;
+            margin-top: 8px;
+        }
+
+        .button.secondary {
+            background-color: #e0ebff;
+            color: #1d4ed8;
+            margin-left: 8px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="brand">
+            <span class="logo" aria-label="Logo Belajaryuk"></span>
+            <h2>Belajaryuk</h2>
+        </div>
+        <nav>
+            <a href="index.html">Beranda</a>
+            <a href="ai.html">AI</a>
+            <a href="top5.html">Leaderboard</a>
+            <a href="#">Tentang</a>
+        </nav>
+    </header>
+
+    <div class="hero">
+        <h1>AI for Learning.</h1>
+        <p>Rekomendasi alat AI yang bisa membantumu belajar lebih cepat dan lebih mudah.</p>
+    </div>
+
+    <div class="cards">
+        <div class="card">
+            <h3>🤖 ChatGPT</h3>
+            <p>Tempat latihan menulis, memahami konsep, dan bertanya tentang materi belajar.</p>
+            <a href="detail.html?id=ai-1" class="button">Lihat Detail</a>
+            <a href="https://chat.openai.com" class="button secondary" target="_blank" rel="noreferrer">Kunjungi Website</a>
+        </div>
+
+        <div class="card">
+            <h3>📘 Perplexity</h3>
+            <p>Rekomendasi jawaban cepat dan sumber belajar yang relevan untuk riset dan pemahaman.</p>
+            <a href="detail.html?id=ai-2" class="button">Lihat Detail</a>
+            <a href="https://www.perplexity.ai" class="button secondary" target="_blank" rel="noreferrer">Kunjungi Website</a>
+        </div>
+
+        <div class="card">
+            <h3>🧠 Claude</h3>
+            <p>Alat bantu untuk belajar konsep panjang, membuat rangkuman, dan menjelaskan materi kompleks.</p>
+            <a href="detail.html?id=ai-3" class="button">Lihat Detail</a>
+            <a href="https://claude.ai" class="button secondary" target="_blank" rel="noreferrer">Kunjungi Website</a>
+        </div>
+
+        <div class="card">
+            <h3>🎓 NotebookLM</h3>
+            <p>Platform untuk belajar dari catatan, dokumen, dan ringkasan materi secara lebih terarah.</p>
+            <a href="detail.html?id=ai-4" class="button">Lihat Detail</a>
+            <a href="https://notebooklm.google.com" class="button secondary" target="_blank" rel="noreferrer">Kunjungi Website</a>
+        </div>
+    </div>
+</body>
+</html>

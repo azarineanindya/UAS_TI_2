@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Detail Website</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            background: #f8fbff;
+            color: #1f2937;
+        }
+
+        header {
+            background-color: #eaf2ff;
+            padding: 20px 30px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .brand {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .logo {
+            width: 42px;
+            height: 42px;
+            border-radius: 12px;
+            background: linear-gradient(135deg, #2563eb, #60a5fa);
+            display: inline-block;
+        }
+
+        nav a {
+            margin-right: 15px;
+            text-decoration: none;
+            color: #333;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 40px auto;
+            background: #fff;
+            border: 1px solid #e5e7eb;
+            border-radius: 20px;
+            padding: 30px;
+            box-shadow: 0 6px 18px rgba(0, 0, 0, 0.04);
+        }
+
+        h1 {
+            color: #2563eb;
+            margin-top: 0;
+        }
+
+        .meta {
+            color: #4b5563;
+            margin-bottom: 20px;
+        }
+
+        .button {
+            display: inline-block;
+            background-color: #2563eb;
+            color: white;
+            text-decoration: none;
+            padding: 10px 16px;
+            border-radius: 10px;
+            margin-top: 10px;
+        }
+
+        .button.secondary {
+            background-color: #edf4ff;
+            color: #1d4ed8;
+            margin-left: 10px;
+        }
+
+        ol {
+            padding-left: 20px;
+            line-height: 1.8;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="brand">
+            <span class="logo" aria-label="Logo Belajaryuk"></span>
+            <h2>Belajaryuk</h2>
+        </div>
+        <nav>
+            <a href="index.html">Beranda</a>
+            <a href="#">Tentang</a>
+        </nav>
+    </header>
+
+    <main class="container">
+        <h1 id="site-title">Judul Website</h1>
+        <p class="meta" id="site-description">Deskripsi website.</p>
+
+        <h2>Cara Penggunaan</h2>
+        <ol id="site-steps"></ol>
+
+        <a id="site-link" href="#" class="button" target="_blank" rel="noreferrer">Kunjungi Website</a>
+        <a href="index.html" class="button secondary">Kembali</a>
+    </main>
+
+    <script>
+        const sites = [
+            {
+                id: '1',
+                title: '📚 Nama Website 1',
+                description: 'Website ini cocok untuk belajar materi dasar dengan cara yang sederhana dan mudah dipahami.',
+                url: '#',
+                steps: [
+                    'Buka halaman utama website.',
+                    'Pilih topik yang ingin dipelajari.',
+                    'Ikuti penjelasan dan latihan yang tersedia.',
+                    'Catat materi penting untuk dipelajari kembali.'
+                ]
+            },
+            {
+                id: '2',
+                title: '💻 Nama Website 2',
+                description: 'Website ini membantu kamu memahami teknologi dan pemrograman dengan contoh yang aplikatif.',
+                url: '#',
+                steps: [
+                    'Masuk ke menu pembelajaran.',
+                    'Pilih materi yang ingin dikuasai.',
+                    'Tonton materi atau baca penjelasannya.',
+                    'Praktikkan langsung agar lebih paham.'
+                ]
+            },
+            {
+                id: '3',
+                title: '🎨 Nama Website 3',
+                description: 'Website ini memberikan inspirasi belajar desain, tata letak, dan kreativitas visual.',
+                url: '#',
+                steps: [
+                    'Buka halaman belajar.',
+                    'Pilih tema desain yang ingin dipelajari.',
+                    'Amati contoh yang sudah tersedia.',
+                    'Coba buat versi sendiri.'
+                ]
+            },
+            {
+                id: '4',
+                title: '📝 Nama Website 4',
+                description: 'Website ini fokus pada menulis, struktur kalimat, dan cara menyusun ide dengan jelas.',
+                url: '#',
+                steps: [
+                    'Baca panduan singkat di halaman depan.',
+                    'Pilih materi yang sedang dibutuhkan.',
+                    'Latih kemampuan menulis sesuai materi.',
+                    'Evaluasi hasil tulisan secara berkala.'
+                ]
+            },
+            {
+                id: '5',
+                title: '🌐 Nama Website 5',
+                description: 'Website ini berguna untuk mempelajari internet, teknologi, dan informasi digital secara lebih luas.',
+                url: '#',
+                steps: [
+                    'Akses menu utama website.',
+                    'Pilih topik yang ingin dipelajari.',
+                    'Pelajari materi dengan fokus satu topik.',
+                    'Gunakan pengetahuan tersebut dalam aktivitas sehari-hari.'
+                ]
+            },
+            {
+                id: '6',
+                title: '🚀 Nama Website 6',
+                description: 'Website ini cocok untuk belajar ilmu baru secara cepat dan terstruktur dengan contoh yang sederhana.',
+                url: '#',
+                steps: [
+                    'Buka website dan pilih kategori pembelajaran.',
+                    'Baca materi yang disajikan dengan teliti.',
+                    'Kerjakan latihan atau tugas yang tersedia.',
+                    'Ulangi pembelajaran agar lebih mudah dipahami.'
+                ]
+            },
+            {
+                id: 'ai-1',
+                title: '🤖 ChatGPT',
+                description: 'AI ini membantu belajar dengan menjelaskan konsep, membuat ringkasan, serta latihan soal yang lebih cepat dipahami.',
+                url: 'https://chat.openai.com',
+                steps: [
+                    'Buka ChatGPT dan masuk ke akun.',
+                    'Tulis topik yang ingin dipelajari.',
+                    'Minta penjelasan sederhana atau contoh soal.',
+                    'Gunakan hasilnya untuk mengulang materi secara mandiri.'
+                ]
+            },
+            {
+                id: 'ai-2',
+                title: '📘 Perplexity',
+                description: 'AI ini membantu mencari sumber belajar yang relevan dan menjawab pertanyaan belajar dengan referensi yang cepat.',
+                url: 'https://www.perplexity.ai',
+                steps: [
+                    'Masukkan pertanyaan atau topik belajar.',
+                    'Baca jawaban dan sumber yang ditampilkan.',
+                    'Pilih sumber yang paling relevan.',
+                    'Gunakan hasilnya untuk membuat catatan belajar.'
+                ]
+            },
+            {
+                id: 'ai-3',
+                title: '🧠 Claude',
+                description: 'AI ini cocok untuk membaca materi panjang, merangkum inti, dan menjelaskan kisah atau konsep sulit dengan bahasa sederhana.',
+                url: 'https://claude.ai',
+                steps: [
+                    'Masuk ke Claude.',
+                    'Salin materi atau tulis topik yang ingin dijelaskan.',
+                    'Minta ringkasan atau penjelasan lebih sederhana.',
+                    'Gunakan ringkasan untuk belajar dan mengingat inti materi.'
+                ]
+            },
+            {
+                id: 'ai-4',
+                title: '🎓 NotebookLM',
+                description: 'AI ini cocok untuk belajar dari catatan, dokumen, maupun materi kuliah dengan ringkasan yang terarah.',
+                url: 'https://notebooklm.google.com',
+                steps: [
+                    'Unggah dokumen atau catatan kursus.',
+                    'Pilih topik yang ingin dipahami.',
+                    'Baca ringkasan yang dihasilkan.',
+                    'Gunakan catatannya sebagai bahan belajar utama.'
+                ]
+            }
+        ];
+
+        const params = new URLSearchParams(window.location.search);
+        const siteId = params.get('id') || '1';
+        const site = sites.find(item => item.id === siteId) || sites[0];
+
+        document.getElementById('site-title').textContent = site.title;
+        document.getElementById('site-description').textContent = site.description;
+
+        const stepsList = document.getElementById('site-steps');
+        site.steps.forEach(step => {
+            const item = document.createElement('li');
+            item.textContent = step;
+            stepsList.appendChild(item);
+        });
+
+        const siteLink = document.getElementById('site-link');
+        siteLink.href = site.url;
+    </script>
+</body>
+</html>
